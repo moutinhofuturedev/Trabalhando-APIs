@@ -16,3 +16,14 @@ Neste curso foi aplicado ensino sobre `JSON`, `Métodos HTTP`, `INSOMNIA`, entre
 - POST = **cadastrar**
 - PUT = **alterar dados já cadastrados**
 - DELETE = **deletar**
+
+> **Tipos de parâmetros**
+
+[x] _Body Params_ </br>
+O tipo body params é uma forma de enviar informações para api, e essas informações não ficam na url, elas são enviadas no body, ou seja, no corpo da requisicão(JSON).
+
+[x] _Routes Params_ </br>
+Pegar os parâmetros pelas rotas(URL). Enviar informações através das rotas.
+
+[x] _Query Params_ </br>
+O tipo query params é uma forma de passar parâmetros através da url.
