@@ -1,10 +1,16 @@
 const express = require('express')
+const axios = require('axios') // usando Axios para buscar informações com promise na api
+
 const app = express()
 const port = 3000
 app.use(express.json())
 
+// Vamos consumir a api do Github dentro do back-end do nosso projeto(localhost:3000) Node com Axios.
+// O Express não faz requisição em api, ele é usado apenas para criar as rotas da api, mas não serve para buscar os dados, por isso usaremos o Axios
 app.get('/', (req, res) => {
-    res.send("Hello backend")
+    axios.get('https://api.github.com/users/moutinhofuturedev')
+    .then(result => res.send(`<img src="${result.data.avatar_url}">`))
+    .catch(error => console.error(error))
 })
 
 // posso criar outra rota
